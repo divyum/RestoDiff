@@ -1,4 +1,31 @@
 
 <div id="bloodhound" class="search col-xs-2 typeahead tt-hint">
-  <input class="typeahead form-control" type="text" placeholder="search">
+  <% user_city = session.has_key?("user_city") ? session[:user_city] : "" %>
+  <input class="typeahead form-control" type="text" placeholder="search" value='<%= user_city %>'>
+</div>
+
+
+<div>
+  <p>Properties</p>
+</div>
+
+<div id="wrapper">
+	<div id="restaurant_1" class="col-xs-3 input-group restaurant_search">
+	  <input class="form-control" type="text" placeholder="restaurant">
+	  <span class="input-group-btn">
+	    <button class="btn btn-red btn-pluss" type="button">+</button>
+	  </span>
+	</div>
+
+	<div id="restaurant_2" class="col-xs-3 input-group hidden restaurant_search">
+	  <input class="form-control" type="text" placeholder="restaurant">
+	  <span class="input-group-btn" style="inline">
+	    <button class="btn btn-red btn-pluss_1" type="button">+</button>
+	  </span>
+	</div>
+
+	<div id="restaurant_3" class="col-xs-3 input-group hidden restaurant_search">
+	  <input class="form-control" type="text" placeholder="restaurant">
+	</div>
+
 </div>

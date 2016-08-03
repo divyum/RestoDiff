@@ -45,5 +45,16 @@ $('.typeahead').typeahead({
 
 $('.typeahead').bind('typeahead:selected', function(event, datum, name) {
   console.log(datum.location_id);
+  $.post('/set_user_city',{city_id:datum.location_id, city:datum.name});
 });
+
+$('.btn-pluss').on('click', function(){
+  $('#restaurant_2').removeClass('hidden');
+  $('.btn-pluss').addClass('hidden');
+  });
+
+$('.btn-pluss_1').on('click', function(){
+  $('.btn-pluss_1').addClass('hidden');
+  $('#restaurant_3').removeClass('hidden');
+  });
 })

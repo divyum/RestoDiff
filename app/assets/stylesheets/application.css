@@ -16,9 +16,25 @@
  */
 
 
+html,
+body {
+    height: 100%;
+}
+
+#wrapper {
+	width: 1000px;
+  clear:both;
+}
+
 .search {
 	width: 250px;
 	padding-top: 100px;
   padding-left: 30px;
   padding-bottom: 10px;
+}
+
+.restaurant_search {
+	width: 300px;
+	margin-left: 10px;
+	float: left;
 }
