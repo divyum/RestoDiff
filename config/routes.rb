@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'application#about'
   get 'typeahead/:query' => 'application#typeahead'
+  post 'set_user_city' => 'application#set_user_city'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

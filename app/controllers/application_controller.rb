@@ -32,4 +32,15 @@ class ApplicationController < ActionController::Base
 	def typeahead
   	render json: Place.where('name like ?', "%#{params[:query]}%")
 	end
+
+  def set_user_city
+    session["user_city_id"] = params[:city_id]
+    session["user_city"] = params[:city]
+    puts @user_city
+    render json: {}, :status => "OK"
+  end
+
+  def search_restaurant
+  end
+
 end
